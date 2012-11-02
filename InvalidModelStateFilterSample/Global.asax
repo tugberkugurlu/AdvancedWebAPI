@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="InvalidModelStateFilterSample.Global" Language="C#" %>

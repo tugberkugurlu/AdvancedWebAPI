@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="_09_PerRouteMHOwnershipSample.Global" Language="C#" %>
