@@ -12,9 +12,9 @@ namespace AsyncDatabaseCall.APIs {
 
         readonly GalleryContext galleryContext = new GalleryContext();
 
-        public async Task<IEnumerable<Car>> Get() {
+        public Task<IEnumerable<Car>> Get() {
 
-            return await galleryContext.GetCarsViaSPAsync();
+            return galleryContext.GetCarsViaSPAsync();
         }
     }
 }

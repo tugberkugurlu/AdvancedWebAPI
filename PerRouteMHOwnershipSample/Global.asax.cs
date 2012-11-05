@@ -19,19 +19,19 @@ namespace _09_PerRouteMHOwnershipSample {
 
             AutofacWebAPI.Initialize(config);
 
-            config.Routes.MapHttpRoute(
-                "CustomerOrdersHttpRoute",
-                "api/customers/{customerKey}/orders/{key}",
-                new { controller = "CustomerOrders", key = RouteParameter.Optional }
-            );
-
             //config.Routes.MapHttpRoute(
-            //    name: "CustomerOrdersHttpRoute",
-            //    routeTemplate: "api/customers/{customerKey}/orders/{key}",
-            //    defaults: new { controller = "CustomerOrders", key = RouteParameter.Optional },
-            //    constraints: null,
-            //    handler: new CustomerOrdersDispatcher(config)
+            //    "CustomerOrdersHttpRoute",
+            //    "api/customers/{customerKey}/orders/{key}",
+            //    new { controller = "CustomerOrders", key = RouteParameter.Optional }
             //);
+
+            config.Routes.MapHttpRoute(
+                name: "CustomerOrdersHttpRoute",
+                routeTemplate: "api/customers/{customerKey}/orders/{key}",
+                defaults: new { controller = "CustomerOrders", key = RouteParameter.Optional },
+                constraints: null,
+                handler: new CustomerOrdersDispatcher(config)
+            );
 
             config.Routes.MapHttpRoute(
                 "DefaultHttpRoute",

@@ -49,7 +49,7 @@ namespace _09_PerRouteMHOwnershipSample.Filters {
 
         private static int GetCustomerKey(IHttpRouteData routeData) {
 
-            var customerKey = routeData.Values["key"].ToString();
+            var customerKey = routeData.Values["customerkey"].ToString();
             return int.Parse(customerKey);
         }
 

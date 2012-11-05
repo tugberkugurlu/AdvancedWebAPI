@@ -15,7 +15,7 @@ namespace FilterLogic.Controllers {
         //[MySecondActionFilter]
         public string[] GetCars() {
 
-            //throw new NotImplementedException();
+            throw new NotImplementedException();
 
             return new[] { 
                 "Car 1",

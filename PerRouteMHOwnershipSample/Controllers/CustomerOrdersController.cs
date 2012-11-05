@@ -13,7 +13,7 @@ using System.Web.Http;
 
 namespace _09_PerRouteMHOwnershipSample.Controllers {
 
-    //[CustomerOrdersAuthorize]
+    [CustomerOrdersAuthorize]
     public class CustomerOrdersController : ApiController {
 
         private readonly IEntityRepository<Order> _orderRepository;
@@ -30,7 +30,7 @@ namespace _09_PerRouteMHOwnershipSample.Controllers {
         }
 
         //Ensure existance & ownership here.
-        //[EnsureOrderOwnership]
+        [EnsureOrderOwnership]
         public OrderDto GetOrder(int customerKey, int key) {
 
             var order = _orderRepository.GetSingle(key);
@@ -57,7 +57,7 @@ namespace _09_PerRouteMHOwnershipSample.Controllers {
         }
 
         //Ensure existance & ownership here.
-        //[EnsureOrderOwnership]
+        [EnsureOrderOwnership]
         public HttpResponseMessage DeleteOrder(
             int customerKey, int key,
             HttpRequestMessage request) {

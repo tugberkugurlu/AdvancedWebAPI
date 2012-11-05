@@ -18,6 +18,8 @@ namespace FilterLogic {
                 "api/{controller}/{id}",
                 new { id = RouteParameter.Optional }
             );
+
+            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Never;
         }
     }
 }
